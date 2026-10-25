@@ -1,0 +1,103 @@
+# Pixel art, drawn as text. Each character is one pixel; "." is transparent.
+# Colors come from the palette. Rendered to crisp SVG at build time by layouts/_partials/sprite.html.
+# To add a sprite, add a new entry under sprites with rows of equal length.
+
+palette:
+  k: "#16130f"   # black plastic
+  s: "#6f6a62"   # dark silver
+  S: "#c9c3b8"   # silver
+  e: "#efe8da"   # off-white
+  w: "#6b4423"   # dark woodgrain
+  W: "#a8713d"   # woodgrain
+  r: "#d8452a"   # red
+  o: "#e8862a"   # orange
+  y: "#f2c040"   # yellow
+  b: "#4a7be0"   # blue
+  t: "#5a3a22"   # tape brown
+  g: "#3ddc5a"   # phosphor green
+  G: "#0e3d17"   # dark green
+
+sprites:
+  joystick:
+    - "......kkkk......"
+    - ".....kkkkkk....."
+    - ".....kkkkkk....."
+    - "......kkkk......"
+    - ".......kk......."
+    - ".......kk......."
+    - ".......kk......."
+    - ".......kk......."
+    - ".rrr...kk......."
+    - "rrrrr..kk......."
+    - "rrrrr.kkkk......"
+    - ".rrr.kkkkkk....."
+    - "SSSSSSSSSSSSSSSS"
+    - "SkkkkkkkkkkkkkkS"
+    - "SkkkkkkkkkkkkkkS"
+    - "SSSSSSSSSSSSSSSS"
+  kit:
+    - "................"
+    - "...r............"
+    - "..rrr.......y..."
+    - "..rrr......yyy.."
+    - "...k.......yyy.."
+    - "...k........k..."
+    - "wwwkwwwwwwwwkwww"
+    - "wSSkSSSSSSSSkSSw"
+    - "wSoooooooobbbbSw"
+    - "wSSSSSSSSSSSSSSw"
+    - "wwwwwwwwwwwwwwww"
+  computer:
+    - "......SSSSSSSSSS"
+    - "....SSSSSSSSSSSS"
+    - "..SSSkekekekekSS"
+    - ".SSSSekekekekeSS"
+    - "SSSSkekekekekeSS"
+    - "SSSSSkkkkkkkkSSS"
+    - "SSSSSSSSSSSSSSSS"
+    - "ssssssssssssssss"
+  tv:
+    - "....k.....k....."
+    - ".....k...k......"
+    - "......k.k......."
+    - "WWWWWWWWWWWWWWWW"
+    - "WkkkkkkkkkkkWssW"
+    - "WkGGGGGGGGGkWssW"
+    - "WkGgggGGGGGkWkkW"
+    - "WkGGGGGGGGGkWssW"
+    - "WkGggggGGGGkWkkW"
+    - "WkGGGGGGGGGkWssW"
+    - "WkkkkkkkkkkkWssW"
+    - "WWWWWWWWWWWWWWWW"
+    - ".ww..........ww."
+  cassette:
+    - "kkkkkkkkkkkkkkkk"
+    - "keeeeeeeeeeeeeek"
+    - "keoooooooooooook"
+    - "keeeeeeeeeeeeeek"
+    - "kekkkkkkkkkkkkek"
+    - "kekSSkttttkSSkek"
+    - "kekSSkttttkSSkek"
+    - "kekkkkkkkkkkkkek"
+    - "keeeeeeeeeeeeeek"
+    - "kkkkkkkkkkkkkkkk"
+  truck:
+    - "...........SSSS."
+    - "kkkkkkkkkk.SbbS."
+    - "keeeeeeeek.SbbSS"
+    - "keeeeeeeek.SSSSS"
+    - "keeeeeeeekSSSSSS"
+    - "kkkkkkkkkkSSSSSS"
+    - ".kk...kk....kk.."
+    - ".kk...kk....kk.."
+  microphone:
+    - "....SSSS........"
+    - "...SskskS......."
+    - "...SksksS......."
+    - "...SskskS......."
+    - "....SSSS........"
+    - ".....kk........."
+    - ".....kk........."
+    - ".....kk........."
+    - ".....kk........."
+    - "...kkkkkk......."

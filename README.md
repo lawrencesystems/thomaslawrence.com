@@ -1,6 +1,6 @@
 # thomaslawrence.com
 
-Tom Lawrence's personal site: what he works on, talks, a speaker kit for event organizers, and links. One page, built with [Hugo](https://gohugo.io/). Everything here is public.
+Tom Lawrence's personal site: where it started, what he works on, talks, a speaker kit for event organizers, and links. The look borrows from early-1980s home computing: woodgrain, green-screen BASIC, pixel art. One page, built with [Hugo](https://gohugo.io/). Everything here is public.
 
 ## Edit the site
 
@@ -8,7 +8,9 @@ Almost every change is a data file. No HTML needed.
 
 | What | File |
 | --- | --- |
-| Intro text and the line under the name | `content/_index.md` |
+| Intro text, the line under the name, and the green screen's BASIC program | `content/_index.md` |
+| The early years ("Where it started") | `data/history.yaml` |
+| Pixel art | `data/sprites.yaml`, one character per pixel |
 | Current roles (Lawrence Systems, Huntress, shows) | `data/roles.yaml` |
 | Talks and speaking topics | `data/speaking.yaml` |
 | Short and long speaker bios | `data/bios.yaml` |
@@ -18,6 +20,8 @@ Almost every change is a data file. No HTML needed.
 | Layout and styles | `layouts/`, `assets/css/site.css` |
 
 Preview locally with `hugo server`, then open http://localhost:1313. Hugo 0.146 or newer; the standard edition is enough.
+
+Fonts are self-hosted from Google Fonts (Silkscreen, VT323, Atkinson Hyperlegible), so pages make no third-party requests.
 
 ## Workflow
 

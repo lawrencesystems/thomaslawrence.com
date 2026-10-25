@@ -1,10 +1,19 @@
 {{ define "main" }}
-<main id="main" class="hero lost">
+<main id="main" class="lost">
   <div class="wrap">
-    <p class="prompt"><span class="ps1">tom@detroit:~$</span> cd {{ "this-page" }}</p>
-    <p class="prompt err">bash: cd: No such file or directory</p>
-    <h1>Not found</h1>
-    <p class="tagline"><a href="/">Back to the homepage</a></p>
+    <p class="label">Game over</p>
+    <figure class="crt" style="max-width: 560px">
+      <div class="crt-cabinet">
+        <div class="crt-glass">
+          <pre class="crt-text">LOAD "THIS PAGE"
+?FILE NOT FOUND ERROR
+OK
+<span class="crt-cursor" aria-hidden="true"> </span></pre>
+        </div>
+        <div class="crt-controls" aria-hidden="true"><span></span><span></span><span class="crt-grille"></span></div>
+      </div>
+    </figure>
+    <p style="margin-top: 28px"><a href="/">Back to the homepage</a></p>
   </div>
 </main>
 {{ end }}

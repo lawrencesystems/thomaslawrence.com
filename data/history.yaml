@@ -1,0 +1,67 @@
+# "Insert cartridge": the early years, from Tom's original about page. Oldest first.
+# Fields: when, title, sprite (from data/sprites.yaml), text (paragraphs), list (optional bullets)
+
+- when: Childhood
+  title: Atari 2600
+  sprite: joystick
+  text:
+    - >-
+      My adventure started with 128 bytes of RAM and 4 KB of ROM on the Atari 2600. I spent many hours
+      losing myself in that simple 8-bit world. I didn't have a lot of friends growing up, which gave me
+      plenty of time to get really high scores on games like Chopper Command, Pac-Man, and Vanguard.
+
+- when: Childhood
+  title: 160-in-One electronics kit
+  sprite: kit
+  text:
+    - >-
+      I have always wanted to know how everything works. One of my prized possessions was the Radio
+      Shack "160 in ONE" electronics project kit. It came with a book, and I did every project in it,
+      then took notes on the projects I came up with on my own.
+    - >-
+      My parents would offer to take me to Toys R Us for my birthday, but I always wanted to go to Radio
+      Shack instead. That is when they realized I was not like the other children.
+
+- when: Mid 1980s
+  title: Tandy TRS-80
+  sprite: computer
+  text:
+    - >-
+      My life was forever changed when I got my first computer, a Tandy TRS-80 my parents picked up on
+      clearance at Radio Shack. It came with BASIC and a book that taught you the language. I started
+      buying magazines to find more programs, wrote my own games, and spent hours learning how it all
+      worked.
+
+- when: 1992 to 1993
+  title: Pascal, then COBOL
+  sprite: cassette
+  text:
+    - >-
+      I did not get into the IBM PC world until a Pascal class in 10th grade in 1992, followed by a class
+      in 1993 where I learned some COBOL. Those early days had me hooked and launched my career.
+
+- when: 1995
+  title: First tech job
+  sprite: tv
+  text:
+    - >-
+      Right out of high school, I landed a job at a small computer company that mostly did sales and
+      service for the retail market.
+
+- when: 1998
+  title: Sysadmin to head of IT
+  sprite: truck
+  text:
+    - >-
+      I met the president of a small transportation company and started as a junior sysadmin. The company
+      grew from a small operation into a large Midwest carrier hauling just-in-time deliveries for the
+      Ford supplier network. When my manager left, I was promoted to head of IT, with a $1.1 million
+      budget and a lot of room to try ideas. I spent much of that time mining the data on our IBM RS/6000
+      to make the company run more efficiently.
+  list:
+    - An auto-arrival system that read the trucks' Qualcomm GPS data and emailed suppliers when an ETA fell outside its window.
+    - An automated DOT compliance tool that used GPS data to flag drivers over their hours.
+    - Fleet idle-time calculations from GPS data, used to claim refunds on fuel road taxes.
+    - Fuzzy matching on bill of lading entries that caught typos by comparing them with earlier shipments to the same location.
+    - Per-truck fuel efficiency from daily fuel purchases, which flagged outliers and caught drivers stealing fuel.
+    - A dispatch system that matched loads to drivers by location and availability, built on all of the above. It reached the final round for a National Science Foundation grant, and when the grant did not come through, we built it with internal funding.

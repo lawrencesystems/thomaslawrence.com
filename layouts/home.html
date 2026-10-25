@@ -2,8 +2,9 @@
 {{ $speaking := site.Data.speaking }}
 <header class="top">
   <div class="wrap top-inner">
-    <a class="mark" href="/" aria-label="Tom Lawrence home">TL<span class="cursor" aria-hidden="true"></span></a>
+    <a class="mark" href="/" aria-label="Tom Lawrence home">TOM LAWRENCE</a>
     <nav aria-label="Sections">
+      <a href="#story">Story</a>
       <a href="#now">Now</a>
       <a href="#speaking">Speaking</a>
       <a href="#kit">Speaker kit</a>
@@ -14,26 +15,63 @@
 
 <main id="main">
   <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="label">Player 1</p>
+        <h1>Tom<br>Lawrence</h1>
+        <p class="tagline">{{ .Params.tagline }}</p>
+      </div>
+      <figure class="crt" aria-label="A green computer screen running a short BASIC program">
+        <div class="crt-cabinet">
+          <div class="crt-glass">
+            <pre class="crt-text">{{ range .Params.screen }}{{ . }}
+{{ end }}<span class="crt-cursor" aria-hidden="true"> </span></pre>
+          </div>
+          <div class="crt-controls" aria-hidden="true"><span></span><span></span><span class="crt-grille"></span></div>
+        </div>
+      </figure>
+    </div>
+    <div class="stripes" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+  </section>
+
+  <section class="band intro-band">
+    <div class="wrap"><div class="intro">{{ .Content }}</div></div>
+  </section>
+
+  <section class="band" id="story" aria-labelledby="story-h">
     <div class="wrap">
-      <p class="prompt" aria-hidden="true"><span class="ps1">tom@detroit:~$</span> whoami</p>
-      <h1>Tom Lawrence</h1>
-      <p class="tagline">{{ .Params.tagline }}</p>
-      <div class="intro">{{ .Content }}</div>
+      <p class="label">Insert cartridge</p>
+      <h2 id="story-h">Where it started</h2>
+      <ol class="history">
+        {{ range site.Data.history }}
+        <li class="era">
+          <div class="era-art">{{ partial "sprite.html" (dict "name" .sprite "scale" 6) }}</div>
+          <div class="era-body">
+            <p class="era-when">{{ .when }}</p>
+            <h3>{{ .title }}</h3>
+            {{ range .text }}<p>{{ . }}</p>{{ end }}
+            {{ with .list }}<ul class="era-list">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>{{ end }}
+          </div>
+        </li>
+        {{ end }}
+      </ol>
+      <p class="continue">To be continued. The rest of the story, from founding Lawrence Systems in 2003 to today, is on <a href="https://lawrencesystems.com/my-story/">lawrencesystems.com</a>.</p>
     </div>
   </section>
 
   <section class="band" id="now" aria-labelledby="now-h">
     <div class="wrap">
-      <p class="label">Now</p>
+      <p class="label">Now playing</p>
       <h2 id="now-h">What I work on</h2>
-      <ul class="roles">
+      <ul class="carts">
         {{ range site.Data.roles }}
-        <li class="role">
-          <div class="role-head">
+        <li class="cart">
+          <div class="cart-label">
+            <div class="cart-stripes" aria-hidden="true"><span></span><span></span><span></span></div>
             <h3>{{ with .link }}<a href="{{ . }}">{{ end }}{{ .name }}{{ with .link }}</a>{{ end }}</h3>
-            <p class="role-meta">{{ .role }}{{ with .since }} // since {{ . }}{{ end }}</p>
+            <p class="cart-meta">{{ .role }}{{ with .since }} // since {{ . }}{{ end }}</p>
+            <p>{{ .text }}</p>
           </div>
-          <p>{{ .text }}</p>
         </li>
         {{ end }}
       </ul>
@@ -42,7 +80,7 @@
 
   <section class="band" id="speaking" aria-labelledby="speaking-h">
     <div class="wrap">
-      <p class="label">Speaking</p>
+      <p class="label">On stage</p>
       <h2 id="speaking-h">Talks</h2>
       <ol class="talks">
         {{ range $speaking.talks }}
@@ -51,7 +89,7 @@
           <div>
             <h3>{{ .title }}</h3>
             {{ with .with }}<p class="talk-with">With {{ . }}</p>{{ end }}
-            <p>{{ .summary }}</p>
+            <p class="talk-sum">{{ .summary }}</p>
             {{ if or .video .slides }}
             <p class="talk-links">
               {{ with .video }}<a href="{{ . }}">Watch the recording</a>{{ end }}
@@ -123,9 +161,10 @@
 </main>
 
 <footer class="foot">
-  <div class="wrap">
+  <div class="stripes" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+  <div class="wrap foot-inner">
     <p>Opinions here are my own, not my employer's.</p>
-    <p>&copy; {{ now.Year }} Tom Lawrence</p>
+    <p><a href="#main">Press reset</a> &middot; &copy; {{ now.Year }} Tom Lawrence</p>
   </div>
 </footer>
 {{ end }}

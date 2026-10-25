@@ -1,0 +1,26 @@
+{{/*
+  Renders a pixel sprite from data/sprites.yaml as an inline SVG.
+  Usage: {{ partial "sprite.html" (dict "name" "joystick" "scale" 6 "class" "x") }}
+  Horizontal runs of the same color are merged into one rect to keep the markup small.
+*/}}
+{{ $d := site.Data.sprites }}
+{{ $rows := index $d.sprites .name }}
+{{ if not $rows }}{{ errorf "sprite %q not found in data/sprites.yaml" .name }}{{ end }}
+{{ $scale := .scale | default 6 }}
+{{ $w := len (index $rows 0) }}
+{{ $h := len $rows }}
+<svg class="sprite{{ with .class }} {{ . }}{{ end }}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {{ $w }} {{ $h }}" width="{{ mul $w $scale }}" height="{{ mul $h $scale }}" shape-rendering="crispEdges" aria-hidden="true" focusable="false">
+{{- range $y, $row := $rows -}}
+  {{- $chars := split $row "" -}}
+  {{- $start := 0 -}}
+  {{- $prev := "" -}}
+  {{- range $x, $c := $chars -}}
+    {{- if ne $c $prev -}}
+      {{- if and (ne $prev "") (ne $prev ".") -}}<rect x="{{ $start }}" y="{{ $y }}" width="{{ sub $x $start }}" height="1" fill="{{ index $d.palette $prev }}"/>{{- end -}}
+      {{- $start = $x -}}
+      {{- $prev = $c -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if and (ne $prev "") (ne $prev ".") -}}<rect x="{{ $start }}" y="{{ $y }}" width="{{ sub (len $chars) $start }}" height="1" fill="{{ index $d.palette $prev }}"/>{{- end -}}
+{{- end -}}
+</svg>

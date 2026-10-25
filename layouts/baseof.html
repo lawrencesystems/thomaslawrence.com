@@ -7,7 +7,7 @@
   <title>{{ $title }}</title>
   <meta name="description" content="{{ site.Params.description }}">
   <link rel="canonical" href="{{ .Permalink }}">
-  <meta name="theme-color" content="#0b0a08">
+  <meta name="theme-color" content="#120f0b">
   <meta property="og:type" content="profile">
   <meta property="og:title" content="{{ $title }}">
   <meta property="og:description" content="{{ site.Params.description }}">
@@ -19,7 +19,8 @@
   <meta name="twitter:card" content="summary_large_image">
   {{ end }}
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="preload" href="/fonts/Oxanium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/Silkscreen-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/AtkinsonHyperlegible-400.woff2" as="font" type="font/woff2" crossorigin>
   {{ $css := resources.Get "css/site.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 </head>
