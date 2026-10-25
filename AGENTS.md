@@ -11,6 +11,7 @@ Tom Lawrence's personal site. Read README.md first.
 - Pixel art in `data/sprites.yaml` must be original. Do not draw logos, mascots, game characters, or copy box or cartridge art from Atari, Tandy, or anyone else. Generic objects (a joystick, a TV, a cassette) are fine.
 - Huntress work is listed as Tom's role. Do not describe Huntress products or make claims on Huntress's behalf.
 - Run `hugo --gc --minify` before opening a pull request; it must finish with no errors or warnings.
+- Publishing is a separate step: only `deploy/publish.sh`, only from a clean checkout of `main`, and only when Tom asks.
 
 ## Writing
 

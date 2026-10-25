@@ -25,42 +25,23 @@ Fonts are self-hosted from Google Fonts (Silkscreen, VT323, Atkinson Hyperlegibl
 
 ## Workflow
 
-1. Changes go on a branch and arrive as a pull request.
+1. Changes go on a branch and arrive as a pull request on GitHub.
 2. Tom reviews and merges to `main`.
-3. Within five minutes the web server pulls `main`, builds, and publishes.
-
-Merging to `main` is publishing. Protect the branch in GitHub (Settings, Branches) so nothing lands on it without a pull request.
-
-## How deploys work
-
-The server pulls; GitHub never pushes. A systemd timer on the web server runs `deploy/update.sh` every five minutes. It fetches `main`, and only if something changed, builds the site into a temporary folder, checks the build, and rsyncs it into the folder Caddy serves. The repo is public, so the server needs no credentials, and there is no deploy key in GitHub that could reach the server.
-
-### One-time server setup
-
-Run as root on the web server (Debian or Ubuntu with Caddy already installed):
+3. Tom asks the Claude in his LXC container to publish. It runs `deploy/publish.sh`, which pulls `main`, builds, checks the build, and rsyncs it to the web server.
 
 ```bash
-# Hugo from the official release (distro packages are too old), plus git and rsync
-apt install -y git rsync
-curl -fsSLO https://github.com/gohugoio/hugo/releases/download/v0.152.2/hugo_0.152.2_linux-amd64.deb
-dpkg -i hugo_0.152.2_linux-amd64.deb && hugo version
-
-# A user that can only build this site
-useradd --system --no-create-home --shell /usr/sbin/nologin sitebuild
-git clone https://github.com/OWNER/REPO.git /srv/thomaslawrence.com
-mkdir -p /var/www/thomaslawrence/public
-chown -R sitebuild:sitebuild /srv/thomaslawrence.com /var/www/thomaslawrence
-
-# The timer
-cp /srv/thomaslawrence.com/deploy/thomaslawrence-update.{service,timer} /etc/systemd/system/
-systemctl daemon-reload
-systemctl enable --now thomaslawrence-update.timer
-systemctl start thomaslawrence-update.service      # first build now
-journalctl -u thomaslawrence-update.service -n 20   # should end with "Published ..."
+deploy/publish.sh --dry-run   # show what would change on the server
+deploy/publish.sh             # publish
 ```
 
-Then add the blocks in `deploy/Caddyfile` to `/etc/caddy/Caddyfile` (replacing the placeholder site) and run `systemctl reload caddy`.
+`publish.sh` refuses to run with uncommitted local changes, so the live site always matches `main` on GitHub. It uses the same `lsweb` SSH alias as the Lawrence Systems deploy and writes to `/var/www/thomaslawrence/public/` (override with `PUBLISH_REMOTE`).
 
-Changes to the systemd units in this repo are not picked up automatically. Copy them again and run `systemctl daemon-reload`.
+Protect `main` in GitHub (Settings, Branches) so nothing lands on it without a pull request.
 
-To force a rebuild: `systemctl start thomaslawrence-update.service`, or run `deploy/update.sh --force` as `sitebuild`.
+## Web server
+
+Add the blocks in `deploy/Caddyfile` to `/etc/caddy/Caddyfile` (replacing the placeholder site), create `/var/www/thomaslawrence/public` owned by the deploy user, and run `systemctl reload caddy`.
+
+## Optional: let the server pull by itself
+
+`deploy/server-pull/` has a script and a systemd timer that make the web server check GitHub every five minutes and publish `main` on its own, with no LXC step. Setup steps are at the top of `deploy/server-pull/update.sh`. Use one method or the other, not both.

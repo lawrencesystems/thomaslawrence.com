@@ -13,7 +13,7 @@ Environment=WEB_ROOT=/var/www/thomaslawrence/public
 CacheDirectory=thomaslawrence
 Environment=HOME=/var/cache/thomaslawrence
 Environment=HUGO_CACHEDIR=/var/cache/thomaslawrence/hugo
-ExecStart=/srv/thomaslawrence.com/deploy/update.sh
+ExecStart=/srv/thomaslawrence.com/deploy/server-pull/update.sh
 # Lock the job down: it only needs the repo, the web root, and outbound HTTPS.
 NoNewPrivileges=yes
 ProtectSystem=strict

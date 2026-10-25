@@ -6,6 +6,15 @@
 # Paths (override in the systemd unit's Environment= lines):
 #   REPO_DIR  the clone of the repo
 #   WEB_ROOT  the folder Caddy serves
+#
+# One-time setup, as root on the web server:
+#   apt install -y git rsync && install Hugo 0.146+ from the official GitHub release .deb
+#   useradd --system --no-create-home --shell /usr/sbin/nologin sitebuild
+#   git clone https://github.com/OWNER/REPO.git /srv/thomaslawrence.com
+#   mkdir -p /var/www/thomaslawrence/public
+#   chown -R sitebuild:sitebuild /srv/thomaslawrence.com /var/www/thomaslawrence
+#   cp /srv/thomaslawrence.com/deploy/server-pull/thomaslawrence-update.{service,timer} /etc/systemd/system/
+#   systemctl daemon-reload && systemctl enable --now thomaslawrence-update.timer
 set -euo pipefail
 
 REPO_DIR="${REPO_DIR:-/srv/thomaslawrence.com}"
