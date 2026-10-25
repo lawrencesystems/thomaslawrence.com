@@ -1,5 +1,5 @@
 # The early years, from Tom's original about page. Shown on the homepage and at the top of /history/. Oldest first.
-# Fields: when, title, sprite (from data/sprites.yaml), text (paragraphs), list (optional bullets)
+# Fields: when, title, sprite (from data/sprites.yaml), text (paragraphs), list (optional bullets), sources (optional)
 
 - when: Childhood
   title: Atari 2600
@@ -45,8 +45,11 @@
   sprite: tv
   text:
     - >-
-      Right out of high school, I landed a job at a small computer company that mostly did sales and
-      service for the retail market.
+      Right out of high school, I worked at several small computer companies that mostly did sales and
+      service for the retail market. Most of them are gone now, but one of them, Southgate Computers, is
+      still in business.
+  sources:
+    - {label: Southgate Computers, url: "https://www.southgatecomputers.com/"}
 
 - when: 1998 to 2003
   title: Sysadmin to head of IT
@@ -60,8 +63,8 @@
       to make the company run more efficiently.
   list:
     - An auto-arrival system that read the trucks' Qualcomm GPS data and emailed suppliers when an ETA fell outside its window.
-    - An automated DOT compliance tool that used GPS data to flag drivers over their hours.
-    - Fleet idle-time calculations from GPS data, used to claim refunds on fuel road taxes.
-    - Fuzzy matching on bill of lading entries that caught typos by comparing them with earlier shipments to the same location.
+    - An automated tool that used GPS data to flag drivers over their hours.
+    - Fleet idle-time calculations from GPS data.
+    - Fuzzy matching on bill of lading entries that caught typos by comparing them with earlier shipments to the same location to increase accuracy.
     - Per-truck fuel efficiency from daily fuel purchases, which flagged outliers and caught drivers stealing fuel.
     - A dispatch system that matched loads to drivers by location and availability, built on all of the above. It reached the final round for a National Science Foundation grant, and when the grant did not come through, we built it with internal funding.
