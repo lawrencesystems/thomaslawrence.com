@@ -5,4 +5,6 @@
 - {name: Bluesky, label: "@lawrencesystems.com", url: "https://bsky.app/profile/lawrencesystems.com"}
 - {name: GitHub, label: lawrencesystems, url: "https://github.com/lawrencesystems"}
 - {name: LinkedIn, label: Tom Lawrence, url: "https://www.linkedin.com/in/lawrencesystems/"}
+- {name: Signal, label: Message me, url: "https://signal.me/#eu/YIEQ9pedWtG5-hADlR_amxcK8Mts1tRUpZRnmU7DyiRV3B_SN0BL67sTHrf1RQKv"}
+- {name: Contact, label: lawrencesystems.com/contact, url: "https://lawrencesystems.com/contact/"}
 - {name: Consulting, label: lawrencesystems.com/hire-us, url: "https://lawrencesystems.com/hire-us/"}
