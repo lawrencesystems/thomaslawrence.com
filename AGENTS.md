@@ -17,3 +17,6 @@ Tom Lawrence's personal site. Read README.md first.
 - No em dashes. Use commas, colons, or a new sentence.
 - Plain, direct sentences. No hype.
 - Homepage copy is first person. Speaker bios are third person.
+- State facts, not verdicts. Numbers, dates, and names of projects or events are fine; adjectives about Tom ("expert", "practical", "renowned") are not.
+- No comparisons that imply others do worse ("the tools I actually use", "explained by someone who runs it").
+- Put credentials where the reader needs them: bios and role descriptions. The opening lines say what Tom does, not how good he is at it.
