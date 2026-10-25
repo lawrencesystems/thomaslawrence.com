@@ -6,7 +6,7 @@ shows:
   - {name: Sunday Morning Linux Review, role: Co-host, years: 2014 to 2021, text: "A weekly Linux and open source news podcast. The show has ended.", url: "https://www.linuxlinks.com/review-sunday-morning-linux-review-linux-open-source-news/"}
   - {name: The Homelab Show, role: "Co-host, with Jay LaCroix", years: 2021 to 2024, text: "A podcast about running your own lab at home.", url: "https://www.learnlinux.tv/tag/homelab-show/"}
   - {name: Business Technicalities, role: Host, years: 2022 to present, text: "The business side of running an MSP.", url: "https://www.youtube.com/@businesstechnicalities"}
-  - {name: Streaming Security, years: 2026 to present, text: "A security news show on the Lawrence Systems channel.", url: "https://www.youtube.com/@LAWRENCESYSTEMS/search?query=Streaming%20Security"}
+  - {name: Streaming Security, role: "Co-host, with Matt Lee", years: 2026 to present, text: "A security news podcast.", url: "https://www.youtube.com/@StreamingSecurity"}
   - {name: Threat Level Throttle, role: "Co-host, with Matt Lee", years: 2026 to present, text: "Off-road motorcycle videos.", url: "https://www.youtube.com/channel/UCc_9lLBSHs285zmztdIgb5Q"}
 
 # Newest first
@@ -16,8 +16,9 @@ guest:
   - {show: Unraid Uncast, title: "A ZFS Masterclass with Tom Lawrence", date: April 2024, url: "https://unraid.net/blog/uncast-zfs-masterclass"}
   - {show: 2GuysTek Podcast, title: "The Case for Open Source Hypervisors", date: March 2024, url: "https://2guystek.buzzsprout.com/1852562/episodes/14642003-the-case-for-open-source-hypervisors-with-special-guest-tom-lawrence"}
   - {show: IT in the D, title: "461: YouTube Success, Business Merger, Social Networks, and AI", date: July 2023, url: "https://itinthed.com/30128/youtube-success-business-merger-and-social-networks-and-ai-with-tom-lawrence-of-lawrence-systems-it-in-the-d-461/"}
+  - {show: IT in the D, title: "426: Tom Lawrence of Lawrence Systems", date: February 2022, url: "https://itinthed.com/25548/episode-426-with-tom-lawrence-of-lawrence-systems/"}
   - {show: Graylog PodLog, title: "We interview Tom Lawrence from Lawrence Systems", date: September 2021, url: "https://community.graylog.org/t/podlog-podcast-we-interview-tom-lawrence-from-lawrence-systems/21307"}
   - {show: IT in the D, title: "396: Tom Lawrence of Lawrence Systems", date: May 2021, url: "https://itinthed.com/24859/episode-396-tom-lawrence-of-lawrence-systems/"}
   - {show: Crosstalk Solutions Podcast, title: "014: Special Guest Tom Lawrence", date: "2020", url: "https://www.crosstalksolutions.com/014-special-guest-tom-lawrence/"}
-  - {show: MSP Voice, title: "Episode 48: Talking YouTube with Tom Lawrence", date: "", url: "https://www.cloudberrylab.com/resources/blog/msp-voice-episode-48/"}
+  - {show: MSP Voice, title: "Episode 48: Talking YouTube with Tom Lawrence", date: May 2019, url: "https://www.cloudberrylab.com/resources/blog/msp-voice-episode-48/"}
   - {show: Daily Detroit, title: "Detroit Can Be Better Than Silicon Valley", date: June 2017, url: "https://www.dailydetroit.com/podcast-detroit-can-better-silicon-valley-tom-lawrence/"}

@@ -116,8 +116,9 @@
       independent: Huntress has no rights over my content and no influence on how it is made.
   list:
     - "Started Threat Level Throttle, an off-road motorcycle channel, with my friend Matt Lee."
-    - "Started Streaming Security, a security news show on the Lawrence Systems channel."
+    - "Started Streaming Security, a security news podcast, with Matt Lee."
     - "Gave talks at GrrCON, with Matt Lee, and at the 45Drives Creator Summit. See [appearances](/appearances/)."
-    - "Built a pink phone booth hacking game with Matt Lee and Patrick Garrity of VulnCheck. A video about it is coming."
+    - "Built a pink phone booth hacking game with Matt Lee and Patrick Garrity of VulnCheck, and ran it at GrrCON. A video about it is coming."
   sources:
     - {label: Threat Level Throttle on YouTube, url: "https://www.youtube.com/channel/UCc_9lLBSHs285zmztdIgb5Q"}
+    - {label: Streaming Security on YouTube, url: "https://www.youtube.com/@StreamingSecurity"}
