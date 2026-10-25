@@ -5,6 +5,12 @@
     <p class="era-when">{{ .when }}</p>
     <h3>{{ .title }}</h3>
     {{ range .text }}<p>{{ . | markdownify }}</p>{{ end }}
+    {{ with .image }}
+    <figure class="era-photo">
+      <img src="{{ .src }}" alt="{{ .alt }}" loading="lazy"{{ with .width }} width="{{ . }}"{{ end }}{{ with .height }} height="{{ . }}"{{ end }}>
+      {{ with .caption }}<figcaption>{{ . }}</figcaption>{{ end }}
+    </figure>
+    {{ end }}
     {{ with .list }}<ul class="era-list">{{ range . }}<li>{{ . | markdownify }}</li>{{ end }}</ul>{{ end }}
     {{ with .sources }}
     <p class="era-sources"><span>Sources:</span> {{ range $i, $s := . }}{{ if $i }} &middot; {{ end }}<a href="{{ $s.url }}">{{ $s.label }}</a>{{ end }}</p>

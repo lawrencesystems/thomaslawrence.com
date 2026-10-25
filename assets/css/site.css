@@ -244,3 +244,8 @@ p { margin: 0; }
 .guest-show { font-weight: 700; }
 .guest-title { color: var(--muted); }
 @media (max-width: 720px) { .guests a { grid-template-columns: 1fr; } }
+
+/* Photos in the history timeline */
+.era-photo { margin: 6px 0 4px; max-width: 360px; }
+.era-photo img { width: 100%; height: auto; border: 2px solid var(--line); }
+.era-photo figcaption { margin-top: 6px; font-size: 0.85rem; color: var(--muted); }

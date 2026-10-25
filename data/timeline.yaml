@@ -1,5 +1,6 @@
 # The story from 2003 on, shown on /history/ after the early years in data/history.yaml. Oldest first.
 # Fields: when, title, sprite (from data/sprites.yaml, optional), text (paragraphs), list (optional),
+#         image (optional {src, alt, caption, width, height}, file under static/img/),
 #         sources (optional list of {label, url}). Add a source wherever a public link exists.
 
 - when: "2003"
@@ -31,6 +32,20 @@
   sources:
     - {label: "Business listing: Lawrence Technology Services & PC Pickup", url: "https://rcpmag.com/partners/al/l/lawrence-technology-services--pc-pickup.aspx"}
 
+- when: "2013"
+  title: Small Business Person of the Year
+  sprite: badge
+  text:
+    - >-
+      The Southern Wayne County Regional Chamber named me its 2013 Small Business Person of the Year, for
+      Lawrence Technology Services.
+  image:
+    src: /img/swcrc-small-business-person-2013.jpg
+    alt: "Plaque reading: Tom Lawrence, Lawrence Technology Services, Small Business Person 2013, Southern Wayne County Regional Chamber"
+    caption: The award plaque from the Southern Wayne County Regional Chamber.
+    width: 560
+    height: 766
+
 - when: "2014"
   title: Starting the YouTube channel
   sprite: camera
@@ -52,6 +67,17 @@
   sources:
     - {label: "LinuxLinks review of SMLR", url: "https://www.linuxlinks.com/review-sunday-morning-linux-review-linux-open-source-news/"}
     - {label: "Daily Detroit interview, 2017", url: "https://www.dailydetroit.com/podcast-detroit-can-better-silicon-valley-tom-lawrence/"}
+
+- when: "2016"
+  title: Goldman Sachs 10,000 Small Businesses
+  sprite: cassette
+  text:
+    - >-
+      I completed the Goldman Sachs 10,000 Small Businesses program, a business education program for
+      owners of growing small businesses.
+  sources:
+    - {label: About the 10,000 Small Businesses program in Detroit, url: "https://www.goldmansachs.com/community-transformation/10000-small-businesses/us/insights/10ksb-launches-in-detroit"}
+    - {label: "LA2M speaker bio", url: "https://la2m.org/speaker/thomas-lawrence/"}
 
 - when: "2017"
   title: Moving to Southgate
@@ -93,6 +119,20 @@
       MSP.
   sources:
     - {label: Business Technicalities on YouTube, url: "https://www.youtube.com/@businesstechnicalities"}
+
+- when: "2023"
+  title: CompTIA ISAO board
+  sprite: badge
+  text:
+    - >-
+      I served one year, 2023, on the board of the CompTIA Cybersecurity Information Sharing and Analysis
+      Organization (ISAO).
+  image:
+    src: /img/comptia-isao-2023.jpg
+    alt: "Glass award engraved: Tom Lawrence, Thank you for your leadership and service, 2023, with a red shield and lock emblem"
+    caption: The thank-you award from the CompTIA ISAO, 2023.
+    width: 900
+    height: 529
 
 - when: 2023 to 2025
   title: CNWR
