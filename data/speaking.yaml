@@ -1,5 +1,5 @@
 # Speaking. Newest talks first.
-# Talk fields: title, event, year, with (optional), summary, video (optional), slides (optional)
+# Talk fields: title, event, year, with (optional), summary, video, slides, source (optional links)
 
 topics:
   - Agentic AI and MCP security
@@ -9,13 +9,21 @@ topics:
   - Virtualization and VMware replacement
   - Security for MSPs and IT teams
 
+# Talks without a date or a public record. Shown as a short list under the talks.
+earlier:
+  - ConnectWise IT Nation
+  - Penguicon, on open source, firewalls, and Linux
+  - Linux user groups and meetups
+  - Local chamber of commerce events on technology for business owners, starting in 2008
+
 talks:
   - title: Security and the Hermes Agent
     event: 45Drives Creator Summit
     year: 2026
     summary: >-
       How AI agents actually work, Meta's Agents Rule of Two, and building a sysadmin helper with
-      the Hermes agent while keeping a human in the lead.
+      the Hermes agent while keeping a human in the lead. Wilmington, North Carolina.
+    source: https://www.ariva.de/news/eqs-news-45drives-announces-first-wave-of-featured-speakers-12056504
 
   - title: Giving Swords to Our Future AI Overlords
     event: GrrCON
@@ -25,6 +33,30 @@ talks:
       Agentic AI and MCP security: prompt injection, agent-to-agent communication, OAuth abuse, and
       LLM supply chain risk.
     video: https://www.youtube.com/watch?v=l1143GuOo9U
+
+  - title: Featured creator
+    event: 45Drives Creators Summit
+    year: 2025
+    summary: The third summit, at 45Drives' U.S. headquarters in Wilmington, North Carolina.
+    source: https://curatedtechnologynews.substack.com/p/1b8dbb572e4361bf0e95367121eb320c
+
+  - title: Featured creator
+    event: 45Drives Creators Summit
+    year: 2024
+    summary: The second summit, at 45Drives headquarters in Sydney, Nova Scotia.
+    source: https://forum.45homelab.com/t/second-annual-45drives-creators-summit/1650
+
+  - title: Featured creator
+    event: 45Drives Creators Summit
+    year: 2023
+    summary: The first summit, at 45Drives headquarters in Nova Scotia. I have been part of every one since.
+    source: https://www.45drives.com/creators-summit
+
+  - title: "YouTube: Getting Started and How the Platform Works"
+    event: LA2M
+    year: 2020
+    summary: A talk for Lunch Ann Arbor Marketing, a nonprofit marketing education group, given virtually in May 2020.
+    source: https://la2m.org/speaker/thomas-lawrence/
 
   - title: AI and Social Engineering
     event: Empath MSP webinar

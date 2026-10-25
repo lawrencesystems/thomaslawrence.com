@@ -46,11 +46,18 @@
             <h3>{{ .title }}</h3>
             {{ with .with }}<p class="talk-with">With {{ . }}</p>{{ end }}
             <p class="talk-sum">{{ .summary }}</p>
-            {{ if or .video .slides }}<p class="talk-links">{{ with .video }}<a href="{{ . }}">Watch the recording</a>{{ end }}{{ with .slides }}<a href="{{ . }}">Slides</a>{{ end }}</p>{{ end }}
+            {{ if or .video .slides .source }}<p class="talk-links">{{ with .video }}<a href="{{ . }}">Watch the recording</a>{{ end }}{{ with .slides }}<a href="{{ . }}">Slides</a>{{ end }}{{ with .source }}<a href="{{ . }}">Event page</a>{{ end }}</p>{{ end }}
           </div>
         </li>
         {{ end }}
       </ol>
+      {{ with site.Data.speaking.earlier }}
+      <div class="earlier">
+        <h3>Also spoke at</h3>
+        <p class="earlier-note">Talks from before I kept records, so no dates or links.</p>
+        <ul>{{ range . }}<li>{{ . }}</li>{{ end }}</ul>
+      </div>
+      {{ end }}
     </div>
   </section>
 

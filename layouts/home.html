@@ -63,17 +63,17 @@
       <p class="label">On stage</p>
       <h2 id="speaking-h">Talks</h2>
       <ol class="talks">
-        {{ range $speaking.talks }}
+        {{ range first 3 $speaking.talks }}
         <li class="talk">
           <p class="talk-when">{{ .event }}{{ with .year }} {{ . }}{{ end }}</p>
           <div>
             <h3>{{ .title }}</h3>
             {{ with .with }}<p class="talk-with">With {{ . }}</p>{{ end }}
             <p class="talk-sum">{{ .summary }}</p>
-            {{ if or .video .slides }}
+            {{ if or .video .slides .source }}
             <p class="talk-links">
               {{ with .video }}<a href="{{ . }}">Watch the recording</a>{{ end }}
-              {{ with .slides }}<a href="{{ . }}">Slides</a>{{ end }}
+              {{ with .slides }}<a href="{{ . }}">Slides</a>{{ end }}{{ with .source }}<a href="{{ . }}">Event page</a>{{ end }}
             </p>
             {{ end }}
           </div>

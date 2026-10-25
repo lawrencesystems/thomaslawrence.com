@@ -244,3 +244,13 @@ p { margin: 0; }
 .guest-show { font-weight: 700; }
 .guest-title { color: var(--muted); }
 @media (max-width: 720px) { .guests a { grid-template-columns: 1fr; } }
+
+/* Photos in the history timeline */
+.era-photo { margin: 6px 0 4px; max-width: 360px; }
+.era-photo img { width: 100%; height: auto; border: 2px solid var(--line); }
+.era-photo figcaption { margin-top: 6px; font-size: 0.85rem; color: var(--muted); }
+.earlier { margin-top: 36px; padding: 20px 22px; border: 2px dashed var(--line); max-width: 66ch; }
+.earlier h3 { font: 700 1rem/1.2 var(--pixel); text-transform: uppercase; margin-bottom: 6px; }
+.earlier-note { color: var(--muted); font-size: 0.9rem; margin-bottom: 10px; }
+.earlier ul { margin: 0; padding-left: 1.2em; display: grid; gap: 4px; }
+.earlier li::marker { content: "\25A0  "; color: var(--s2); font-size: 0.8em; }
