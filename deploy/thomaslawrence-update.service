@@ -1,0 +1,22 @@
+[Unit]
+Description=Pull and publish thomaslawrence.com from GitHub
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=sitebuild
+Group=sitebuild
+Environment=REPO_DIR=/srv/thomaslawrence.com
+Environment=WEB_ROOT=/var/www/thomaslawrence/public
+# Hugo and git need a writable home and cache; systemd creates /var/cache/thomaslawrence.
+CacheDirectory=thomaslawrence
+Environment=HOME=/var/cache/thomaslawrence
+Environment=HUGO_CACHEDIR=/var/cache/thomaslawrence/hugo
+ExecStart=/srv/thomaslawrence.com/deploy/update.sh
+# Lock the job down: it only needs the repo, the web root, and outbound HTTPS.
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+ReadWritePaths=/srv/thomaslawrence.com /var/www/thomaslawrence

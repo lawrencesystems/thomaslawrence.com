@@ -1,0 +1,27 @@
+# Add to /etc/caddy/Caddyfile on the web server.
+
+www.thomaslawrence.com {
+	redir https://thomaslawrence.com{uri} permanent
+}
+
+thomaslawrence.com {
+	root * /var/www/thomaslawrence/public
+	encode zstd gzip
+	header {
+		Strict-Transport-Security "max-age=31536000"
+		X-Content-Type-Options "nosniff"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		Permissions-Policy "camera=(), microphone=(), geolocation=()"
+		X-Frame-Options "SAMEORIGIN"
+		-Server
+	}
+	@assets path /css/* /js/* /fonts/* /og/*
+	header @assets Cache-Control "public, max-age=2592000"
+	@probes path /wp-* /xmlrpc.php *.php /.env* /.git*
+	abort @probes
+	file_server
+	handle_errors {
+		rewrite * /404.html
+		file_server
+	}
+}

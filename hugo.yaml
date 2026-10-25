@@ -1,0 +1,19 @@
+baseURL: https://thomaslawrence.com/
+languageCode: en-us
+title: Tom Lawrence
+enableRobotsTXT: true
+disableKinds: [taxonomy, term, section, rss]
+timeZone: America/Detroit
+
+params:
+  description: Tom Lawrence runs Lawrence Systems and its YouTube channel, works in community and content at Huntress, and speaks on infrastructure, open source, and security.
+  # Email for speaking and press. Leave empty to show only the LinkedIn and Lawrence Systems routes.
+  contactEmail: ""
+  # Optional headshot for the speaker kit, a path under static/ (e.g. /img/tom-headshot.jpg).
+  # Leave empty to keep the page face-free.
+  headshot: ""
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: false

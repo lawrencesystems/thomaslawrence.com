@@ -1,0 +1,32 @@
+# Speaking. Newest talks first.
+# Talk fields: title, event, year, with (optional), summary, video (optional), slides (optional)
+
+topics:
+  - Agentic AI and MCP security
+  - Open source infrastructure and self-hosting
+  - Networking and firewalls
+  - Storage, ZFS, and TrueNAS
+  - Virtualization and VMware replacement
+  - Security for MSPs and IT teams
+
+talks:
+  - title: Security and the Hermes Agent
+    event: 45Drives Creator Summit
+    year: 2026
+    summary: >-
+      How AI agents actually work, Meta's Agents Rule of Two, and building a sysadmin helper with
+      the Hermes agent while keeping a human in the lead.
+
+  - title: Giving Swords to Our Future AI Overlords
+    event: GrrCON
+    year: 2026
+    with: Matt Lee
+    summary: >-
+      Agentic AI and MCP security: prompt injection, agent-to-agent communication, OAuth abuse, and
+      LLM supply chain risk.
+    video: https://www.youtube.com/watch?v=l1143GuOo9U
+
+  - title: AI and Social Engineering
+    event: Empath MSP webinar
+    with: Wes Spencer and Dean Trempelas
+    summary: How attackers use AI for phishing and impersonation, and what MSPs can do about it.

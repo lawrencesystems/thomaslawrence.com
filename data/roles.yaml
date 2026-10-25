@@ -1,0 +1,26 @@
+# What Tom does now. Shown in order on the homepage.
+# Fields: name, role, text, link (optional), since (optional)
+
+- name: Lawrence Systems
+  role: Founder
+  since: 2003
+  text: >-
+    A YouTube channel with 400,000+ subscribers covering networking, open source, storage, and security,
+    a community forum, and infrastructure consulting.
+  link: https://lawrencesystems.com/
+
+- name: Huntress
+  role: Community and content
+  since: April 2026
+  text: Practitioner-focused security content and community work for MSPs and IT teams.
+  link: https://www.huntress.com/
+
+- name: Streaming Security
+  role: Co-host
+  text: A security news show on the Lawrence Systems channel.
+  link: https://www.youtube.com/@LAWRENCESYSTEMS/search?query=Streaming%20Security
+
+- name: Threat Level Throttle
+  role: Co-host, with Matt
+  text: Off-road motorcycle videos. Nothing to do with IT, mostly.
+  link: ""

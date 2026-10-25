@@ -1,0 +1,131 @@
+{{ define "main" }}
+{{ $speaking := site.Data.speaking }}
+<header class="top">
+  <div class="wrap top-inner">
+    <a class="mark" href="/" aria-label="Tom Lawrence home">TL<span class="cursor" aria-hidden="true"></span></a>
+    <nav aria-label="Sections">
+      <a href="#now">Now</a>
+      <a href="#speaking">Speaking</a>
+      <a href="#kit">Speaker kit</a>
+      <a href="#elsewhere">Elsewhere</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="wrap">
+      <p class="prompt" aria-hidden="true"><span class="ps1">tom@detroit:~$</span> whoami</p>
+      <h1>Tom Lawrence</h1>
+      <p class="tagline">{{ .Params.tagline }}</p>
+      <div class="intro">{{ .Content }}</div>
+    </div>
+  </section>
+
+  <section class="band" id="now" aria-labelledby="now-h">
+    <div class="wrap">
+      <p class="label">Now</p>
+      <h2 id="now-h">What I work on</h2>
+      <ul class="roles">
+        {{ range site.Data.roles }}
+        <li class="role">
+          <div class="role-head">
+            <h3>{{ with .link }}<a href="{{ . }}">{{ end }}{{ .name }}{{ with .link }}</a>{{ end }}</h3>
+            <p class="role-meta">{{ .role }}{{ with .since }} // since {{ . }}{{ end }}</p>
+          </div>
+          <p>{{ .text }}</p>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+  </section>
+
+  <section class="band" id="speaking" aria-labelledby="speaking-h">
+    <div class="wrap">
+      <p class="label">Speaking</p>
+      <h2 id="speaking-h">Talks</h2>
+      <ol class="talks">
+        {{ range $speaking.talks }}
+        <li class="talk">
+          <p class="talk-when">{{ .event }}{{ with .year }} {{ . }}{{ end }}</p>
+          <div>
+            <h3>{{ .title }}</h3>
+            {{ with .with }}<p class="talk-with">With {{ . }}</p>{{ end }}
+            <p>{{ .summary }}</p>
+            {{ if or .video .slides }}
+            <p class="talk-links">
+              {{ with .video }}<a href="{{ . }}">Watch the recording</a>{{ end }}
+              {{ with .slides }}<a href="{{ . }}">Slides</a>{{ end }}
+            </p>
+            {{ end }}
+          </div>
+        </li>
+        {{ end }}
+      </ol>
+      <div class="topics">
+        <h3>Topics I speak on</h3>
+        <ul>{{ range $speaking.topics }}<li>{{ . }}</li>{{ end }}</ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="kit" aria-labelledby="kit-h">
+    <div class="wrap">
+      <p class="label">For organizers</p>
+      <h2 id="kit-h">Speaker kit</h2>
+      <p class="lede">Bios ready to paste into a program or an introduction.</p>
+      <div class="bios">
+        {{ with site.Data.bios }}
+        <article class="bio">
+          <div class="bio-head">
+            <h3>Short bio</h3>
+            <button class="copy" type="button" data-copy="bio-short">Copy</button>
+          </div>
+          <div class="bio-text" id="bio-short"><p>{{ .short }}</p></div>
+          <p class="bio-count">{{ len (split .short " ") }} words</p>
+        </article>
+        <article class="bio">
+          <div class="bio-head">
+            <h3>Long bio</h3>
+            <button class="copy" type="button" data-copy="bio-long">Copy</button>
+          </div>
+          <div class="bio-text" id="bio-long">{{ range split .long "\n" }}{{ with strings.TrimSpace . }}<p>{{ . }}</p>{{ end }}{{ end }}</div>
+          <p class="bio-count">{{ len (split (replace .long "\n" " ") " ") }} words</p>
+        </article>
+        {{ end }}
+      </div>
+      {{ with site.Params.headshot }}
+      <figure class="headshot">
+        <img src="{{ . }}" alt="Tom Lawrence" width="400" height="400" loading="lazy">
+        <figcaption><a href="{{ . }}">Full-size headshot</a></figcaption>
+      </figure>
+      {{ end }}
+      <p class="contact">
+        For speaking or press:
+        {{ with site.Params.contactEmail }}<span class="email">{{ . }}</span>, or {{ end }}
+        reach me on <a href="https://www.linkedin.com/company/2990175">LinkedIn</a>.
+        Looking for consulting instead? Use the <a href="https://lawrencesystems.com/hire-us/">Lawrence Systems contact form</a>.
+      </p>
+    </div>
+  </section>
+
+  <section class="band" id="elsewhere" aria-labelledby="elsewhere-h">
+    <div class="wrap">
+      <p class="label">Elsewhere</p>
+      <h2 id="elsewhere-h">Find me</h2>
+      <ul class="links">
+        {{ range site.Data.links }}
+        <li><a href="{{ .url }}" rel="me noopener"><span class="link-name">{{ .name }}</span><span class="link-label">{{ .label }}</span></a></li>
+        {{ end }}
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p>Opinions here are my own, not my employer's.</p>
+    <p>&copy; {{ now.Year }} Tom Lawrence</p>
+  </div>
+</footer>
+{{ end }}

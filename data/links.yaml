@@ -1,0 +1,8 @@
+# "Elsewhere" links. Fields: name, label, url
+
+- {name: YouTube, label: "@LAWRENCESYSTEMS", url: "https://www.youtube.com/@LAWRENCESYSTEMS"}
+- {name: Forums, label: forums.lawrencesystems.com, url: "https://forums.lawrencesystems.com/"}
+- {name: Bluesky, label: "@lawrencesystems.com", url: "https://bsky.app/profile/lawrencesystems.com"}
+- {name: GitHub, label: lawrencesystems, url: "https://github.com/lawrencesystems"}
+- {name: LinkedIn, label: Lawrence Systems, url: "https://www.linkedin.com/company/2990175"}
+- {name: Consulting, label: lawrencesystems.com/hire-us, url: "https://lawrencesystems.com/hire-us/"}
