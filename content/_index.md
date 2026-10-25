@@ -21,6 +21,8 @@ I was born in the suburbs of Detroit, where I still live. I've been in IT since 
 
 My bias is toward open source, self-hosting, and owning your own infrastructure. If a tool works for you, great. If you work for the tool, that's worth a second look.
 
+On security, I like hanging out with and learning from red teams, being a blue team defender in practice, and keeping a purple team mindset.
+
 My mission: learn what solves my problems today, and teach it so others can solve theirs tomorrow.
 
 > Once the bills are paid, money only buys you comfort, and comfort is numbness. Buy the ticket, take the ride. Use your wealth to live a life less than ordinary, and use it to empower others and do great things. Life isn't measured in dollars or time, but in experiences.

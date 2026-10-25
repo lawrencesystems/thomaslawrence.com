@@ -75,8 +75,10 @@
     - >-
       I was a regular at Penguicon, the Detroit-area tech and science fiction convention, which is
       where I met the hosts of the Sunday Morning Linux Review podcast. I joined them as a co-host in
-      2014 and stayed until the show ended in 2021.
+      2014 and stayed until the show ended in 2021. In 2021, Forrester included it in its list of the
+      100 best channel podcasts.
   sources:
+    - {label: "Forrester: The 100 Best Channel Podcasts Of 2021", url: "https://www.forrester.com/blogs/the-100-best-channel-podcasts-of-2021/"}
     - {label: "LinuxLinks review of SMLR", url: "https://www.linuxlinks.com/review-sunday-morning-linux-review-linux-open-source-news/"}
     - {label: "Daily Detroit interview, 2017", url: "https://www.dailydetroit.com/podcast-detroit-can-better-silicon-valley-tom-lawrence/"}
 
