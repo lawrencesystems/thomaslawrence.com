@@ -3,7 +3,7 @@
 
 shows:
   - {name: Lawrence Systems, role: Host, years: 2014 to present, text: "Networking, open source, storage, and security.", url: "https://www.youtube.com/@LAWRENCESYSTEMS"}
-  - {name: Sunday Morning Linux Review, role: Co-host, years: 2014 to 2021, text: "A weekly Linux and open source news podcast. The show has ended.", url: "https://www.linuxlinks.com/review-sunday-morning-linux-review-linux-open-source-news/"}
+  - {name: Sunday Morning Linux Review, role: Co-host, years: 2014 to 2021, text: "A weekly Linux and open source news podcast, on Forrester's 2021 list of the 100 best channel podcasts. The show has ended.", url: "https://www.linuxlinks.com/review-sunday-morning-linux-review-linux-open-source-news/"}
   - {name: The Homelab Show, role: "Co-host, with Jay LaCroix", years: 2021 to 2024, text: "A podcast about running your own lab at home.", url: "https://www.learnlinux.tv/tag/homelab-show/"}
   - {name: Business Technicalities, role: Host, years: 2022 to present, text: "The business side of running an MSP.", url: "https://www.youtube.com/@businesstechnicalities"}
   - {name: Streaming Security, role: "Co-host, with Matt Lee", years: 2026 to present, text: "A security news podcast.", url: "https://www.youtube.com/@StreamingSecurity"}
