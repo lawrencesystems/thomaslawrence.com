@@ -9,6 +9,13 @@ topics:
   - Virtualization and VMware replacement
   - Security for MSPs and IT teams
 
+# Talks without a date or a public record. Shown as a short list under the talks.
+earlier:
+  - ConnectWise IT Nation
+  - Penguicon, on open source, firewalls, and Linux
+  - Linux user groups and meetups
+  - Local chamber of commerce events on technology for business owners, starting in 2008
+
 talks:
   - title: Security and the Hermes Agent
     event: 45Drives Creator Summit

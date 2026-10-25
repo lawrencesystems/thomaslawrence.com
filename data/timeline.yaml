@@ -32,6 +32,18 @@
   sources:
     - {label: "Business listing: Lawrence Technology Services & PC Pickup", url: "https://rcpmag.com/partners/al/l/lawrence-technology-services--pc-pickup.aspx"}
 
+- when: 2008 onward
+  title: Speaking
+  sprite: microphone
+  text:
+    - >-
+      I started giving talks in 2008, and they became part of how I built Lawrence Systems. Most were at
+      small local chamber of commerce events on general tech topics for everyday business owners. I also
+      spoke at Linux meetups and at Penguicon about open source, firewalls, and Linux. I never kept a
+      list of those early talks.
+  sources:
+    - {label: "LA2M speaker bio", url: "https://la2m.org/speaker/thomas-lawrence/"}
+
 - when: "2013"
   title: Small Business Person of the Year
   sprite: badge

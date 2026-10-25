@@ -51,6 +51,13 @@
         </li>
         {{ end }}
       </ol>
+      {{ with site.Data.speaking.earlier }}
+      <div class="earlier">
+        <h3>Also spoke at</h3>
+        <p class="earlier-note">Talks from before I kept records, so no dates or links.</p>
+        <ul>{{ range . }}<li>{{ . }}</li>{{ end }}</ul>
+      </div>
+      {{ end }}
     </div>
   </section>
 
