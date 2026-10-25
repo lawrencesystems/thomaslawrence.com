@@ -13,6 +13,7 @@ shows:
 guest:
   - {show: TrueNAS Tech Talk, title: "Episode 39: Talking TrueNAS and Tech with Tom Lawrence", date: September 2025, url: "https://www.truenas.com/blog/podcast/talking-truenas-and-tech-with-tom-lawrence"}
   - {show: IT in the D, title: "514: Open Source Insights with Tom Lawrence", date: May 2025, url: "https://itinthed.com/34626/open-source-insights-with-tom-lawrence-of-lawrence-systems-it-in-the-d-514/"}
+  - {show: Packet Protector (Packet Pushers), title: "PP054: Understanding WireGuard and Overlay VPNs", date: March 2025, url: "https://packetpushers.net/podcasts/packet-protector/pp054-understanding-wireguard-and-overlay-vpns-with-tom-lawrence/"}
   - {show: Unraid Uncast, title: "A ZFS Masterclass with Tom Lawrence", date: April 2024, url: "https://unraid.net/blog/uncast-zfs-masterclass"}
   - {show: 2GuysTek Podcast, title: "The Case for Open Source Hypervisors", date: March 2024, url: "https://2guystek.buzzsprout.com/1852562/episodes/14642003-the-case-for-open-source-hypervisors-with-special-guest-tom-lawrence"}
   - {show: IT in the D, title: "461: YouTube Success, Business Merger, Social Networks, and AI", date: July 2023, url: "https://itinthed.com/30128/youtube-success-business-merger-and-social-networks-and-ai-with-tom-lawrence-of-lawrence-systems-it-in-the-d-461/"}
