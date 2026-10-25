@@ -1,0 +1,124 @@
+# The story from 2003 on, shown on /history/ after the early years in data/history.yaml. Oldest first.
+# Fields: when, title, sprite (from data/sprites.yaml, optional), text (paragraphs), list (optional),
+#         sources (optional list of {label, url}). Add a source wherever a public link exists.
+
+- when: "2003"
+  title: Founding Lawrence Systems
+  sprite: server
+  text:
+    - >-
+      When ALPIS was split into separate companies, I founded Lawrence Technology Services, now Lawrence
+      Systems, to support them as clients. That is why so many of my early clients were in the
+      transportation sector.
+
+- when: "2005"
+  title: Suburban Electronics and Computers
+  sprite: tv
+  text:
+    - >-
+      I went into business with the founder of Suburban Electronics and renamed it Suburban Electronics
+      and Computers. We repaired TVs, VCRs, and high-end audio, added computer repair, and sold high-end
+      audio equipment on eBay.
+
+- when: 2007 to 2017
+  title: PC Pickup in Taylor
+  sprite: store
+  text:
+    - >-
+      In 2007 my partner and I parted ways, and I opened PC Pickup, the retail side of Lawrence Systems,
+      in Taylor, Michigan. We kept repairing TVs and audio equipment for the first couple of years, until
+      falling flat-screen prices made it impractical.
+  sources:
+    - {label: "Business listing: Lawrence Technology Services & PC Pickup", url: "https://rcpmag.com/partners/al/l/lawrence-technology-services--pc-pickup.aspx"}
+
+- when: "2014"
+  title: Starting the YouTube channel
+  sprite: camera
+  text:
+    - >-
+      On February 7, 2014, I started a YouTube channel called TheTecknowledge, which later became
+      Lawrence Systems. There were very few videos in the first few years.
+  sources:
+    - {label: Lawrence Systems on YouTube, url: "https://www.youtube.com/@LAWRENCESYSTEMS/about"}
+
+- when: 2014 to 2021
+  title: Sunday Morning Linux Review
+  sprite: microphone
+  text:
+    - >-
+      I was a regular at Penguicon, the Detroit-area tech and science fiction convention, which is
+      where I met the hosts of the Sunday Morning Linux Review podcast. I joined them as a co-host in
+      2014 and stayed until the show ended in 2021.
+  sources:
+    - {label: "LinuxLinks review of SMLR", url: "https://www.linuxlinks.com/review-sunday-morning-linux-review-linux-open-source-news/"}
+    - {label: "Daily Detroit interview, 2017", url: "https://www.dailydetroit.com/podcast-detroit-can-better-silicon-valley-tom-lawrence/"}
+
+- when: "2017"
+  title: Moving to Southgate
+  sprite: computer
+  text:
+    - >-
+      I closed the Taylor location and moved into a building in Southgate, Michigan. We did much of the
+      build-out ourselves, including a studio for YouTube and the podcast.
+  sources:
+    - {label: Build-out video, url: "https://youtu.be/FfZaykSkEGE"}
+
+- when: "2019"
+  title: Retail ends, the forums begin
+  sprite: forum
+  text:
+    - >-
+      I wound down the retail side and launched the Lawrence Systems forums, a self-hosted Discourse
+      community where viewers ask technical questions and help each other.
+  sources:
+    - {label: Lawrence Systems forums, url: "https://forums.lawrencesystems.com/"}
+
+- when: 2021 to 2024
+  title: The Homelab Show
+  sprite: microphone
+  text:
+    - >-
+      Jay LaCroix of Learn Linux TV and I started The Homelab Show, a podcast about running your own
+      lab at home. It ran until 2024.
+  sources:
+    - {label: Episodes on Learn Linux TV, url: "https://www.learnlinux.tv/tag/homelab-show/"}
+    - {label: Playlist on YouTube, url: "https://www.youtube.com/playlist?list=PLjGQNuuUzvmtAzqgH7PVvnF_v0X9ZKMeA"}
+
+- when: "2022"
+  title: Business Technicalities
+  sprite: camera
+  text:
+    - >-
+      I started a second YouTube channel, Business Technicalities, for the business side of running an
+      MSP.
+  sources:
+    - {label: Business Technicalities on YouTube, url: "https://www.youtube.com/@businesstechnicalities"}
+
+- when: 2023 to 2025
+  title: CNWR
+  sprite: server
+  text:
+    - >-
+      I sold my managed services clients to CNWR and took an equity position in the company, where Jason
+      Slagle is president. It let me spend more time on YouTube while CNWR handled client projects.
+    - >-
+      At the end of 2025 I decided to leave, and Jason bought my shares. I went back to taking
+      consulting projects directly through Lawrence Systems.
+  sources:
+    - {label: "IT in the D 461, July 2023", url: "https://itinthed.com/30128/youtube-success-business-merger-and-social-networks-and-ai-with-tom-lawrence-of-lawrence-systems-it-in-the-d-461/"}
+
+- when: "2026"
+  title: Huntress, and some new projects
+  sprite: badge
+  text:
+    - >-
+      In April I started working at Huntress in a community and content role. Lawrence Systems stays
+      independent: Huntress has no rights over my content and no influence on how it is made.
+  list:
+    - "Started Threat Level Throttle, an off-road motorcycle channel, with my friend Matt Lee."
+    - "Started Streaming Security, a security news podcast, with Matt Lee."
+    - "Gave talks at GrrCON, with Matt Lee, and at the 45Drives Creator Summit. See [appearances](/appearances/)."
+    - "Built a pink phone booth hacking game with Matt Lee and Patrick Garrity of VulnCheck, and ran it at GrrCON. A video about it is coming."
+  sources:
+    - {label: Threat Level Throttle on YouTube, url: "https://www.youtube.com/channel/UCc_9lLBSHs285zmztdIgb5Q"}
+    - {label: Streaming Security on YouTube, url: "https://www.youtube.com/@StreamingSecurity"}

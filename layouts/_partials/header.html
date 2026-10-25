@@ -1,0 +1,15 @@
+<header class="top">
+  <div class="wrap top-inner">
+    <a class="mark" href="/" aria-label="Tom Lawrence home">TOM LAWRENCE</a>
+    <nav aria-label="Main">
+      {{ $here := .RelPermalink }}
+      {{ range slice
+        (dict "name" "History" "url" "/history/")
+        (dict "name" "Appearances" "url" "/appearances/")
+        (dict "name" "Speaker kit" "url" "/#kit")
+        (dict "name" "Elsewhere" "url" "/#elsewhere") }}
+      <a href="{{ .url }}"{{ if eq $here .url }} aria-current="page"{{ end }}>{{ .name }}</a>
+      {{ end }}
+    </nav>
+  </div>
+</header>

@@ -16,11 +16,13 @@
   link: https://www.huntress.com/
 
 - name: Streaming Security
-  role: Co-host
-  text: A security news show on the Lawrence Systems channel.
-  link: https://www.youtube.com/@LAWRENCESYSTEMS/search?query=Streaming%20Security
+  role: Co-host, with Matt Lee
+  since: 2026
+  text: A security news podcast.
+  link: https://www.youtube.com/@StreamingSecurity
 
 - name: Threat Level Throttle
-  role: Co-host, with Matt
+  role: Co-host, with Matt Lee
+  since: 2026
   text: Off-road motorcycle videos. Nothing to do with IT, mostly.
-  link: ""
+  link: https://www.youtube.com/channel/UCc_9lLBSHs285zmztdIgb5Q
