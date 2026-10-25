@@ -1,17 +1,6 @@
 {{ define "main" }}
 {{ $speaking := site.Data.speaking }}
-<header class="top">
-  <div class="wrap top-inner">
-    <a class="mark" href="/" aria-label="Tom Lawrence home">TOM LAWRENCE</a>
-    <nav aria-label="Sections">
-      <a href="#story">Story</a>
-      <a href="#now">Now</a>
-      <a href="#speaking">Speaking</a>
-      <a href="#kit">Speaker kit</a>
-      <a href="#elsewhere">Elsewhere</a>
-    </nav>
-  </div>
-</header>
+{{ partial "header.html" . }}
 
 <main id="main">
   <section class="hero">
@@ -43,19 +32,9 @@
       <p class="label">Insert cartridge</p>
       <h2 id="story-h">Where it started</h2>
       <ol class="history">
-        {{ range site.Data.history }}
-        <li class="era">
-          <div class="era-art">{{ partial "sprite.html" (dict "name" .sprite "scale" 6) }}</div>
-          <div class="era-body">
-            <p class="era-when">{{ .when }}</p>
-            <h3>{{ .title }}</h3>
-            {{ range .text }}<p>{{ . }}</p>{{ end }}
-            {{ with .list }}<ul class="era-list">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>{{ end }}
-          </div>
-        </li>
-        {{ end }}
+        {{ range site.Data.history }}{{ partial "era.html" . }}{{ end }}
       </ol>
-      <p class="continue">To be continued. The rest of the story, from founding Lawrence Systems in 2003 to today, is on <a href="https://lawrencesystems.com/my-story/">lawrencesystems.com</a>.</p>
+      <p class="continue">To be continued: founding Lawrence Systems, PC Pickup, podcasts, YouTube, and Huntress. <a href="/history/#2003">Read the rest of the story</a>.</p>
     </div>
   </section>
 
@@ -63,6 +42,7 @@
     <div class="wrap">
       <p class="label">Now playing</p>
       <h2 id="now-h">What I work on</h2>
+      {{ partial "stats.html" . }}
       <ul class="carts">
         {{ range site.Data.roles }}
         <li class="cart">
@@ -100,6 +80,7 @@
         </li>
         {{ end }}
       </ol>
+      <p class="more"><a href="/appearances/">All appearances: shows, podcasts, and talks</a></p>
       <div class="topics">
         <h3>Topics I speak on</h3>
         <ul>{{ range $speaking.topics }}<li>{{ . }}</li>{{ end }}</ul>
@@ -160,11 +141,5 @@
   </section>
 </main>
 
-<footer class="foot">
-  <div class="stripes" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-  <div class="wrap foot-inner">
-    <p>Opinions here are my own, not my employer's.</p>
-    <p><a href="#main">Press reset</a> &middot; &copy; {{ now.Year }} Tom Lawrence</p>
-  </div>
-</footer>
+{{ partial "footer.html" . }}
 {{ end }}

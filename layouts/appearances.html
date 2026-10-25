@@ -1,0 +1,77 @@
+{{ define "main" }}
+{{ $a := site.Data.appearances }}
+{{ partial "header.html" . }}
+<main id="main">
+  <section class="page-head">
+    <div class="wrap">
+      <p class="label">{{ .Params.kicker }}</p>
+      <h1>{{ .Title }}</h1>
+      <div class="intro">{{ .Content }}</div>
+      <nav class="jump" aria-label="Jump to a section">
+        <a href="#shows">Shows</a>
+        <a href="#talks">Talks</a>
+        <a href="#guest">Guest appearances</a>
+      </nav>
+    </div>
+  </section>
+
+  <section class="band" id="shows" aria-labelledby="shows-h">
+    <div class="wrap">
+      <p class="label">Now and then playing</p>
+      <h2 id="shows-h">Shows I host or hosted</h2>
+      <ul class="carts">
+        {{ range $a.shows }}
+        <li class="cart">
+          <div class="cart-label">
+            <div class="cart-stripes" aria-hidden="true"><span></span><span></span><span></span></div>
+            <h3><a href="{{ .url }}">{{ .name }}</a></h3>
+            <p class="cart-meta">{{ with .role }}{{ . }} // {{ end }}{{ .years }}</p>
+            <p>{{ .text }}</p>
+          </div>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+  </section>
+
+  <section class="band" id="talks" aria-labelledby="talks-h">
+    <div class="wrap">
+      <p class="label">On stage</p>
+      <h2 id="talks-h">Talks</h2>
+      <ol class="talks">
+        {{ range site.Data.speaking.talks }}
+        <li class="talk">
+          <p class="talk-when">{{ .event }}{{ with .year }} {{ . }}{{ end }}</p>
+          <div>
+            <h3>{{ .title }}</h3>
+            {{ with .with }}<p class="talk-with">With {{ . }}</p>{{ end }}
+            <p class="talk-sum">{{ .summary }}</p>
+            {{ if or .video .slides }}<p class="talk-links">{{ with .video }}<a href="{{ . }}">Watch the recording</a>{{ end }}{{ with .slides }}<a href="{{ . }}">Slides</a>{{ end }}</p>{{ end }}
+          </div>
+        </li>
+        {{ end }}
+      </ol>
+    </div>
+  </section>
+
+  <section class="band" id="guest" aria-labelledby="guest-h">
+    <div class="wrap">
+      <p class="label">Guest star</p>
+      <h2 id="guest-h">Guest appearances</h2>
+      <ol class="guests">
+        {{ range $a.guest }}
+        <li>
+          <a href="{{ .url }}">
+            <span class="guest-date">{{ .date | default "Undated" }}</span>
+            <span class="guest-show">{{ .show }}</span>
+            <span class="guest-title">{{ .title }}</span>
+          </a>
+        </li>
+        {{ end }}
+      </ol>
+      <p class="continue">Had me on your show and it is not listed? <a href="https://github.com/lawrencesystems/thomaslawrence.com/issues">Let me know on GitHub</a>.</p>
+    </div>
+  </section>
+</main>
+{{ partial "footer.html" . }}
+{{ end }}

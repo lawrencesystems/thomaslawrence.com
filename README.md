@@ -1,6 +1,6 @@
 # thomaslawrence.com
 
-Tom Lawrence's personal site: where it started, what he works on, talks, a speaker kit for event organizers, and links. The look borrows from early-1980s home computing: woodgrain, green-screen BASIC, pixel art. One page, built with [Hugo](https://gohugo.io/). Everything here is public.
+Tom Lawrence's personal site: the homepage overview, a full history with sources (/history/), and his shows, talks, and guest appearances (/appearances/). The look borrows from early-1980s home computing: woodgrain, green-screen BASIC, pixel art. Built with [Hugo](https://gohugo.io/). Everything here is public.
 
 ## Edit the site
 
@@ -9,7 +9,10 @@ Almost every change is a data file. No HTML needed.
 | What | File |
 | --- | --- |
 | Intro text, the line under the name, and the green screen's BASIC program | `content/_index.md` |
-| The early years ("Where it started") | `data/history.yaml` |
+| The early years (homepage and top of /history/) | `data/history.yaml` |
+| 2003 to today, with source links (/history/) | `data/timeline.yaml` |
+| Shows hosted and guest appearances (/appearances/) | `data/appearances.yaml` |
+| Channel and forum numbers, with their "as of" date | `data/stats.yaml` |
 | Pixel art | `data/sprites.yaml`, one character per pixel |
 | Current roles (Lawrence Systems, Huntress, shows) | `data/roles.yaml` |
 | Talks and speaking topics | `data/speaking.yaml` |

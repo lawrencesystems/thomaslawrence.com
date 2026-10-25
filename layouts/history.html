@@ -1,0 +1,34 @@
+{{ define "main" }}
+{{ partial "header.html" . }}
+<main id="main">
+  <section class="page-head">
+    <div class="wrap">
+      <p class="label">{{ .Params.kicker }}</p>
+      <h1>{{ .Title }}</h1>
+      <div class="intro">{{ .Content }}</div>
+      <nav class="jump" aria-label="Jump to an era">
+        <a href="#early">The early years</a>
+        <a href="#2003">2003 to today</a>
+      </nav>
+    </div>
+  </section>
+
+  <section class="band" id="early" aria-labelledby="early-h">
+    <div class="wrap">
+      <p class="label">Insert cartridge</p>
+      <h2 id="early-h">The early years</h2>
+      <ol class="history">{{ range site.Data.history }}{{ partial "era.html" . }}{{ end }}</ol>
+    </div>
+  </section>
+
+  <section class="band" id="2003" aria-labelledby="later-h">
+    <div class="wrap">
+      <p class="label">Player 1 continues</p>
+      <h2 id="later-h">2003 to today</h2>
+      <ol class="history">{{ range site.Data.timeline }}{{ partial "era.html" . }}{{ end }}</ol>
+      <p class="continue">Missing something, or have a correction? I keep this page accurate on purpose. <a href="https://github.com/lawrencesystems/thomaslawrence.com/issues">Open an issue on GitHub</a>.</p>
+    </div>
+  </section>
+</main>
+{{ partial "footer.html" . }}
+{{ end }}

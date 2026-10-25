@@ -1,0 +1,13 @@
+{{/* One entry in a history timeline. Context: an entry from data/history.yaml or data/timeline.yaml */}}
+<li class="era">
+  <div class="era-art">{{ with .sprite }}{{ partial "sprite.html" (dict "name" . "scale" 6) }}{{ end }}</div>
+  <div class="era-body">
+    <p class="era-when">{{ .when }}</p>
+    <h3>{{ .title }}</h3>
+    {{ range .text }}<p>{{ . | markdownify }}</p>{{ end }}
+    {{ with .list }}<ul class="era-list">{{ range . }}<li>{{ . | markdownify }}</li>{{ end }}</ul>{{ end }}
+    {{ with .sources }}
+    <p class="era-sources"><span>Sources:</span> {{ range $i, $s := . }}{{ if $i }} &middot; {{ end }}<a href="{{ $s.url }}">{{ $s.label }}</a>{{ end }}</p>
+    {{ end }}
+  </div>
+</li>

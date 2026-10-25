@@ -1,4 +1,4 @@
-# "Insert cartridge": the early years, from Tom's original about page. Oldest first.
+# The early years, from Tom's original about page. Shown on the homepage and at the top of /history/. Oldest first.
 # Fields: when, title, sprite (from data/sprites.yaml), text (paragraphs), list (optional bullets)
 
 - when: Childhood
@@ -48,14 +48,14 @@
       Right out of high school, I landed a job at a small computer company that mostly did sales and
       service for the retail market.
 
-- when: 1998
+- when: 1998 to 2003
   title: Sysadmin to head of IT
   sprite: truck
   text:
     - >-
-      I met the president of a small transportation company and started as a junior sysadmin. The company
-      grew from a small operation into a large Midwest carrier hauling just-in-time deliveries for the
-      Ford supplier network. When my manager left, I was promoted to head of IT, with a $1.1 million
+      I met the president of ALPIS, a small transportation company, and started as a junior sysadmin.
+      ALPIS grew into a large Midwest carrier and a tier one transportation provider for Ford, hauling
+      just-in-time deliveries for its supplier network. When my manager left, I was promoted to head of IT, with a $1.1 million
       budget and a lot of room to try ideas. I spent much of that time mining the data on our IBM RS/6000
       to make the company run more efficiently.
   list:

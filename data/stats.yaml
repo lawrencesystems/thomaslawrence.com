@@ -1,0 +1,7 @@
+# Numbers that change over time. Update the values and the date together.
+asOf: October 25, 2026
+items:
+  - {value: "400,000+", label: YouTube subscribers}
+  - {value: "1,897", label: Videos published}
+  - {value: "71.8 million", label: Video views}
+  - {value: "7,252", label: Forum members}

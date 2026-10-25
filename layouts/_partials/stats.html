@@ -1,0 +1,8 @@
+{{ with site.Data.stats }}
+<div class="stats">
+  <ul>
+    {{ range .items }}<li><span class="stat-value">{{ .value }}</span><span class="stat-label">{{ .label }}</span></li>{{ end }}
+  </ul>
+  <p class="stats-date">As of {{ .asOf }}</p>
+</div>
+{{ end }}
